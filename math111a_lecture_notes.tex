@@ -360,4 +360,164 @@ $$G_2=\langle a,b|a^2,b^2,[a,b]\rangle$$
 
 \section*{Lecture 2}
 
+\noindent\underline{More Examples:}
+\begin{itemize}
+    \item The set of integers $\mathbb{Z}$ is a group under addition. The identity element is $0\in\mathbb{Z}$. The inverse of $k\in\mathbb{Z}$ is $-k\in\mathbb{Z}$.
+    \item The set of rational numbers $\mathbb{Q}$ is also a group under addition.
+    \item The set of Real numbers $\mathbb{R}$ is also a group under addition.
+    \item The set of Complex numbers $\mathbb{C}$ is also a group under addition.
+    \item On the other hand the integers do not form a group under multiplication. There is an identity element $1\in\mathbb{Z}$. However inverses don't exist. For example there is no integer $n\in\mathbb{Z}$ such that $2n=1$.
+    
+    \ 
+
+    How about the rationals $\mathbb{Q}$ under multiplication?
+    \ 
+
+    Almost a group: \begin{itemize}
+        \item associative $\checkmark$
+        \item identity element, $1\in\mathbb{Q} \ \checkmark$ 
+    \end{itemize}
+    Every rational number has an inverse \underline{except} 0.
+    $$\left(\frac{a}{b}\right)^{-1}=\frac{b}{a}$$
+    \item The set $\mathbb{Q}^*:=\mathbb{Q}\backslash \{0\}$ of nonzero rational numbers is a group under multiplication.
+    \item The set $\mathbb{R}^*:=\mathbb{R}\backslash\{0\}$ of nonzero real numbers is a group under multiplication.
+    \item The set $\mathbb{C}^*=\mathbb{C}\backslash\{0\}$ of nonzero complex numbers is a group under multiplication.
+\end{itemize}
+
+\noindent\underline{Terminology:}
+\begin{itemize}
+    \item $(\mathbb{Z},+)$, $(\mathbb{Q},+)$, $(\mathbb{R},+)$, $(\mathbb{C},+)$ are the "additive groups" of integers, rationals, reals and complex numbers.
+    \item $(\mathbb{Q}^*,\times)$, $(\mathbb{R}^*,\times)$, $(\mathbb{C}^*,\times)$ are the "multiplicative groups" of nonzero rationals, reals and complex numbers.
+\end{itemize}
+
+\noindent\underline{Recall:}
+
+\noindent An \underline{equivalence relation} on a set $X$ is a relation $\sim$ on $X$ which is reflexive, symmetric and transitive.
+
+The \underline{equivalence class} $[X]_\sim$ of an element $x\in X$ consists of all elements which are equivalent to $x$.
+
+$$[x]_\sim=\{y\in X|x\sim y\}$$
+
+The equivalence classes $[x]_\sim$ and $[y]_\sim$ wither coincide or are disjoint.
+
+$$\text{Either,   }[x]_\sim=[y]_\sim\Leftrightarrow x\sim y$$
+
+$$\text{or,   }[x]_\sim\cap[y]_\sim=\varnothing$$
+
+In other words, the equivalence classes \underline{partition} the set $X$. Every element of $X$ belongs to exactly one equivalence class.
+
+\noindent\underline{Example:}
+
+\noindent Let $n\ge1$. We can define an equivalence relation $\sim$ on $\mathbb{Z}$ by,
+
+$k\sim l$ iff $k-l$ is divisible by $n$. (In other words, $k\equiv l\mod n$)
+
+\noindent The equivalence classes $[k]$(sometimes denoted $\bar{k}$) are called the \underline{residue classes modulo $n$}
+
+There are exactly $n$ of them: $[0],[1],[2],...,[n-1]$,
+
+$$[0]=\{k\in\mathbb{Z}|k\equiv 0\mod n\}=[n]$$
+
+$$[1]=\{k\in\mathbb{Z}|k\equiv 1\mod n\}$$
+$$:$$
+$$[n-1]=\{k\in\mathbb{Z}|k\equiv n-1\mod n\}$$
+
+Let $\mathbb{Z}_n=\{[0],[1],...,[n-1]\}$ denote the set of residue classes modulo $n$. We can define a binary operation on $\mathbb{Z}_n$ by,
+$$\mathbb{Z}_n\times\mathbb{Z}_n\to\mathbb{Z}_n$$
+$$([k],[l])\to[k+l]$$
+
+We just need to check that this is well defined, i.e., $[k+l]\in\mathbb{Z}_n$ does not depend on the choices of representatives $k$ and $l$ of the residue classes $[k]$ and $[l]$.
+
+\noindent Suppose $[k]=[k']$ and $[l]=[l']$. We claim that $[k+l]=[k'+l']$,
+
+$[k]=[k']\Leftrightarrow k-k'=nd_1$ for some $d_1\in\mathbb{Z}$
+
+$[l]=[l']\Leftrightarrow l-l'=nd_2$ for some $d_2\in\mathbb{Z}$
+
+$$(k+l)-(k'+l')=(k-k')+(l-l')=nd_1+nd_2$$
+$$=n(d_1+d_2)\text{  is divisible by $n$}$$
+
+$$\therefore [k+l]=[k'+l']\ \checkmark$$
+
+\noindent We thus have a well-defined binary operation, $+:\mathbb{Z}_n\times\mathbb{Z}_n\to\mathbb{Z}_n$, i.e., $[k]+[l`]=[k+l]$.
+
+\begin{itemize}
+    \item Associativity of `addition on $\mathbb{Z}$ implies the associativity of this addition on $\mathbb{Z}_n$'
+    \item Identity element $[0]\in\mathbb{Z}_n$.
+    \item The inverse of $[k]$ is $[-k]$.
+    \item $\mathbb{Z}_n$ is a group called the \underline{additiive group of integers modulo $n$}.
+    \item In particular, this is a finite abelian group of any finite order.
+\end{itemize}
+
+\noindent\underline{Example:}
+
+\begin{itemize}
+    \item $n=1$, $\mathbb{Z}_1=\{[0]\}$
+    \begin{table}[H]
+        \centering
+        \begin{tabular}{c|c}
+            &0\\
+            \hline
+            0&0
+        \end{tabular}
+    \end{table}
+
+    \item $n=2$, $\mathbb{Z}_2=\{[0],[1]\}$
+
+    \begin{table}[H]
+        \centering
+        \begin{tabular}{c|cc}
+            &0&1\\
+            \hline
+            0&0&1\\
+            1&1&0
+        \end{tabular}
+    \end{table}
+
+    \item $n=3$, $\mathbb{Z}_3=\{[0],[1],[2]\}$
+    \begin{table}[H]
+        \centering
+        \begin{tabular}{c|ccc}
+            &0&1&2\\
+            \hline
+            0&0&1&2\\
+            1&1&2&0\\
+            2&2&0&1
+        \end{tabular}
+    \end{table}
+
+
+    These are the same as the first 3 groups discussed last lecture.
+
+    \item $n=4$, $\mathbb{Z}_4=\{[0],[1],[2],[3]\}$
+
+    \begin{table}[H]
+        \centering
+        \begin{tabular}{c|cccc}
+            &0&1&2&3\\
+            \hline
+            0&0&1&2&3\\
+            1&1&2&3&0\\
+            2&2&3&0&1\\
+            3&3&0&1&2
+        \end{tabular}
+    \end{table}
+    This is the first example of a group of order 4 from last lecture.
+\end{itemize}
+
+\noindent\underline{Symmetric Groups}
+
+\begin{tcolorbox} [title= Definition:, colback=black!10!white]
+    A \underline{permutation} of a set $X$ is a bijection $X\to X$ from $X$ to itself.
+\end{tcolorbox}
+
+\noindent\underline{Proposition:} The set $\text{Perm}(x)=\{f:X\to X|\text{$f$ is a bijection}\}$ of all permutations of $X$ is a group under composition of functions.
+
+\begin{proof}
+    We first check that the composition of two permutations of $X$ is a permutation. i.e., given a bijection $f:X\xrightarrow{\sim}X$ and $g:X\xrightarrow{\sim} X$ we derive that $g\circ f:X\to X$ is a bijection. 
+
+    Recall, bijection $\equiv$ one-to-one \& onto.
+
+\end{proof}
+
 \end{document}
